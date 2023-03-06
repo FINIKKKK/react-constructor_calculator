@@ -1,0 +1,37 @@
+{
+  "singleQuote": true,
+  "semi": true,
+  "printWidth": 100,
+  "quoteProps": "consistent",
+  "trailingComma": "es5",
+  "importOrder": [
+    "^@(assets|components|context|hooks|lib|pages|routes|services|styles|ui|utils)/?(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderParserPlugins": [
+    "jsx",
+    "typescript"
+  ],
+  "importAliases": {
+    "@": "."
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.js",
+        "*.jsx",
+        "*.ts",
+        "*.tsx",
+        "*.json",
+        "*.yml",
+        "*.yaml",
+        "*.md"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "singleAttributePerLine": true
+      }
+    }
+  ]
+}

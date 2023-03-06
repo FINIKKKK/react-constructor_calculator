@@ -1,0 +1,53 @@
+// ---- Global-Tags ----
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+}
+a {
+  color: #000;
+  transition: 0.2s;
+}
+svg {
+  fill: #000;
+  transition: 0.2s;
+  height: auto;
+}
+
+// ---- Global-Classes ----
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1170px;
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  // background-color: $main;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
+// Selection
+::selection {
+  // background: rgba($main, 0.5) !important;
+}
