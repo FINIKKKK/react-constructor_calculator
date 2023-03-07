@@ -1,48 +1,38 @@
 import React from 'react';
-import { Button } from '../Button';
-import { ListButton } from '../ListButton';
+import { Card } from '../../components';
 
 import ss from './Constructor.module.scss';
 
 interface ConstructorProps {}
 
-const list1 = ['/', 'x', '+', '-'];
-const list2 = ['7', '8', '9', '4', '5', '6', '1', '2', '3', '0', ','];
+const buttons1 = [
+  { id: 1, text: '/' },
+  { id: 1, text: 'x' },
+  { id: 1, text: '+' },
+  { id: 1, text: '-' },
+];
+
+const buttons2 = [
+  { id: 5, text: '7' },
+  { id: 6, text: '8' },
+  { id: 7, text: '9' },
+  { id: 8, text: '4' },
+  { id: 9, text: '5' },
+  { id: 10, text: '6' },
+  { id: 11, text: '1' },
+  { id: 12, text: '2' },
+  { id: 13, text: '3' },
+  { id: 14, text: '0' },
+  { id: 15, text: ',' },
+];
 
 export const Constructor: React.FC<ConstructorProps> = ({}) => {
   return (
     <div className="constructor">
-      <div className="block">
-        <div className="input">0</div>
-      </div>
-
-      <div className="block">
-        <ul className="list1">
-          {list1.map((text: string, index) => (
-            <Button
-              key={index}
-              id={index}
-              text={text}
-            />
-          ))}
-        </ul>
-      </div>
-
-      <div className="block">
-        <ul className="list2">
-          {list2.map((text: string, index: number) => (
-            <Button
-              key={index}
-              id={index}
-              text={text}
-            />
-          ))}
-        </ul>
-      </div>
-
-      <div className="block">
-        <div className="btn">=</div>
-      </div>
+      <Card textButton="0" />
+      <Card buttons={buttons1} />
+      <Card buttons={buttons2} />
+      <Card textButton="=" />
     </div>
   );
 };

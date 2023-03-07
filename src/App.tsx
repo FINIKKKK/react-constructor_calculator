@@ -1,13 +1,15 @@
 import React from 'react';
-import { Constructor } from './components/Constructor';
-import { Field } from './components/Field/Field';
+import { Constructor, Field, Tabs } from './components';
 
 function App() {
   return (
     <div className="main">
       <div className="calculator">
         <Constructor />
-        <Field />
+        <div className="leftSide">
+          <Tabs />
+          <Field />
+        </div>
       </div>
     </div>
   );
